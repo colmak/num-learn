@@ -8,6 +8,11 @@ type TechnologyCardProps = {
   documentation: string;
 };
 
+type IconProps = {
+  id: string;
+  image: string;
+}
+
 const Home: NextPage = () => {
   const { data, isLoading } = trpc.useQuery(["hello", { text: "Ron" }]);
   return (
@@ -28,13 +33,25 @@ const Home: NextPage = () => {
           <h1 className="text-5xl md:text-[3rem] leading-normal font-bold text-gray-700">
             Learn Pi
           </h1>
-          <div id="menu" className="pt-3 grid gap-3 mt-pt-3 3 text-center md:grid-cols-3 lg:w-2/3">
+          <div id="menu" className="pt-3 grid gap-3 mt-pt-3 3 text-center md:grid-cols-4 ">
 
           </div>
           <div id="quick-config"></div>
         </div>
       </main>
     </>
+  );
+};
+const Icon = ({
+  id,
+  image,
+}: IconProps) => {
+  return (
+    <div title={id}>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-680 -1030 300 180">
+
+      </svg>
+    </div>
   );
 };
 
