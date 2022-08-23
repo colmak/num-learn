@@ -2,8 +2,14 @@ import "../styles/globals.css";
 import type { AppType } from "next/dist/shared/lib/utils";
 import { withTRPC } from '@trpc/next';
 import { AppRouter } from './api/trpc/[trpc]';
+import { useEffect } from "react";
+
 
 const MyApp: AppType = ({ Component, pageProps }) => {
+    useEffect(() => {
+      const root: any = document.getElementById("__next")
+      root.className = "bg-bac";
+    }, []);
   return <Component {...pageProps} />;
 };
 

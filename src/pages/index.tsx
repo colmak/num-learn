@@ -13,24 +13,24 @@ type IconProps = {
   image: string;
 }
 
+
 const Home: NextPage = () => {
   const { data, isLoading } = trpc.useQuery(["hello", { text: "Ron" }]);
   return (
-    <>
+    < >
       <Head>
         <title>Learn Pi</title>
 
         <meta name="description" content="Learn the digits of Pi" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       {/* <main className="container mx-auto flex flex-col items-center justify-center min-h-screen p-4"> */}
-      <main className="container mx-auto flex flex-col items-center justify-flex-start min-h-screen">
+      <main className="bg-bac container mx-auto flex flex-col items-center justify-flex-start min-h-screen">
         <div
           id="top"
           className="pt-3 grid gap-3 mt-pt-3 3 text-center md:grid-cols-3 lg:w-2/3"
         >
-          <h1 className="text-5xl md:text-[3rem] leading-normal font-bold text-gray-700">
+          <h1 className="text-5xl text-white md:text-[3rem] leading-normal font-bold ">
             Learn Pi
           </h1>
           <div id="menu" className="pt-3 grid gap-3 mt-pt-3 3 text-center md:grid-cols-4 ">
