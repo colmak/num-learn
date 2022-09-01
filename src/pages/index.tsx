@@ -1,18 +1,15 @@
 import type { NextPage } from "next";
 import { trpc } from "./utils/trpc";
 import Head from "next/head";
+import { FiUser, FiSliders, FiAward, FiInfo } from "react-icons/fi";
+import { IconContext } from "react-icons";
+
 
 type TechnologyCardProps = {
   name: string;
   description: string;
   documentation: string;
 };
-
-type IconProps = {
-  id: string;
-  image: string;
-}
-
 
 const Home: NextPage = () => {
   const { data, isLoading } = trpc.useQuery(["hello", { text: "Ron" }]);
@@ -33,25 +30,27 @@ const Home: NextPage = () => {
           <h1 className="text-5xl text-white md:text-[3rem] leading-normal font-bold ">
             Learn Pi
           </h1>
-          <div id="menu" className="pt-3 grid gap-3 mt-pt-3 3 text-center md:grid-cols-4 ">
-
+          <div id="menu" className="pt-3 grid gap-3 mt-pt-3 3 items-center md:grid-cols-4 ">
+          <IconContext.Provider value={{color: '#ec4c56', size: '30'}}>
+            <FiAward />
+            <FiSliders />
+            <FiInfo />
+            <FiUser />
+          </IconContext.Provider>
           </div>
-          <div id="quick-config"></div>
+          <div id="quick-config" className="pr-10 grid text-center items-center justify-end">
+          <h1 className="text-1xl text-sub md:text-[1rem] leading-normal font-bold ">
+            Learn
+          </h1>
+          <h1 className="text-1xl text-sub md:text-[1rem] leading-normal font-bold ">
+            Test
+          </h1>
+          </div>
+          <div id="mid"></div>
+          <div id="end"></div>
         </div>
       </main>
     </>
-  );
-};
-const Icon = ({
-  id,
-  image,
-}: IconProps) => {
-  return (
-    <div title={id}>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-680 -1030 300 180">
-
-      </svg>
-    </div>
   );
 };
 
