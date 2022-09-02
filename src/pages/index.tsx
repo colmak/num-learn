@@ -4,7 +4,6 @@ import Head from "next/head";
 import { FiUser, FiSliders, FiAward, FiInfo } from "react-icons/fi";
 import { IconContext } from "react-icons";
 
-
 type TechnologyCardProps = {
   name: string;
   description: string;
@@ -14,7 +13,7 @@ type TechnologyCardProps = {
 const Home: NextPage = () => {
   const { data, isLoading } = trpc.useQuery(["hello", { text: "Ron" }]);
   return (
-    < >
+    <>
       <Head>
         <title>Learn Pi</title>
 
@@ -28,26 +27,41 @@ const Home: NextPage = () => {
           className="pt-3 grid gap-3 mt-pt-3 3 text-center md:grid-cols-3 lg:w-2/3"
         >
           <h1 className="text-5xl text-white md:text-[3rem] leading-normal font-bold ">
-            Learn Pi
+            Learn <span className="text-main text-6xl">π</span>
           </h1>
-          <div id="menu" className="pt-3 grid gap-3 mt-pt-3 3 items-center md:grid-cols-4 ">
-          <IconContext.Provider value={{color: '#ec4c56', size: '30'}}>
-            <FiAward />
-            <FiSliders />
-            <FiInfo />
-            <FiUser />
-          </IconContext.Provider>
+          <div
+            id="menu"
+            className="pt-3 grid gap-3 mt-pt-3 3 items-center grid-cols-4"
+          >
+            <IconContext.Provider value={{ color: "#596172", size: "30" }}>
+              <FiAward />
+              <FiSliders />
+              <FiInfo />
+              <FiUser />
+            </IconContext.Provider>
           </div>
-          <div id="quick-config" className="pr-10 grid text-center items-center justify-end">
-          <h1 className="text-1xl text-sub md:text-[1rem] leading-normal font-bold ">
-            Learn
-          </h1>
-          <h1 className="text-1xl text-sub md:text-[1rem] leading-normal font-bold ">
-            Test
-          </h1>
+          <div
+            id="quick-config"
+            className="pr-10 grid text-center items-center justify-end"
+          >
+            <h1 className="text-1xl text-sub md:text-[1rem] leading-normal font-bold ">
+              Learn
+            </h1>
+            <h1 className="text-1xl text-sub md:text-[1rem] leading-normal font-bold ">
+              Test
+            </h1>
           </div>
-          <div id="mid"></div>
-          <div id="end"></div>
+        </div>
+        <div
+          id="mid"
+          className="pt-3 grid gap-3 mt-pt-3 3 items-center justify-center md:grid-rows-3"
+        >
+          <div>a</div>
+          <div>b</div>
+          <div>c</div>
+        </div>
+        <div id="footer" className="grid">
+          <div>e</div>
         </div>
       </main>
     </>
