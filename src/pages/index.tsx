@@ -24,7 +24,7 @@ const Home: NextPage = () => {
       <main className="bg-bac container mx-auto flex flex-col items-center justify-flex-start min-h-screen">
         <div
           id="top"
-          className="pt-3 grid gap-3 mt-pt-3 3 text-center md:grid-cols-3 lg:w-2/3"
+          className="pt-3 grow-0 grid gap-3 mt-pt-3 3 text-center md:grid-cols-3 lg:w-2/3"
         >
           <h1 className="text-5xl text-white md:text-[3rem] leading-normal font-bold ">
             Learn <span className="text-main text-6xl">π</span>
@@ -54,13 +54,13 @@ const Home: NextPage = () => {
         </div>
         <div
           id="mid"
-          className="pt-3 grid gap-3 mt-pt-3 3 items-center justify-center md:grid-rows-3"
+          className="pt-3 grow grid gap-3 mt-pt-3 3 items-center justify-center md:grid-rows-3"
         >
           <div>a</div>
           <div>b</div>
           <div>c</div>
         </div>
-        <div id="footer" className="grid">
+        <div id="footer" className="grow-0 grid bottom-0">
           <div>e</div>
         </div>
       </main>
