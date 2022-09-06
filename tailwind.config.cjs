@@ -1,22 +1,32 @@
 /** @type {import('tailwindcss').Config} */
 
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class", // or 'media' or 'class'
   theme: {
     colors: {
-      'bac': '#242933',
-      'main': '#ec4c56',
-      'caret': '#ec4c56',
-      'sub': '#596172',
-      'subalt': '#1c222d',
-      'text': '#f6f0e9',
-      'error': '#ec4c56',
-      'errorextra': '#9b333a',
-      'colorfulerror': '#ecdc4c',
-      'colorfulerrorextra': '#bdb03d',
+      bg: "#242933",
+      main: "#ec4c56",
+      caret: "#ec4c56",
+      sub: "#596172",
+      subalt: "#1c222d",
+      text: "#f6f0e9",
+      error: "#ec4c56",
+      errorextra: "#9b333a",
+      colorfulerror: "#ecdc4c",
+      colorfulerrorextra: "#bdb03d",
+      bg2: "#fff",
+      main2: "#ff360d",
+      caret2: "red",
+      sub2: "#b7b7b7",
+      subalt2: "#ececec",
+      text2: "#000",
+      error2: "#d70000",
+      errorextra2: "#b00000",
+      colorfulerror2: "#000",
+      colorfulerrorextra2: "#000",
       inherit: colors.inherit,
       current: colors.current,
       transparent: colors.transparent,

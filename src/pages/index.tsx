@@ -3,6 +3,7 @@ import { trpc } from "./utils/trpc";
 import Head from "next/head";
 import { FiUser, FiSliders, FiAward, FiInfo } from "react-icons/fi";
 import { IconContext } from "react-icons";
+import ThemeIcon from './components/ThemeIcon'
 
 type TechnologyCardProps = {
   name: string;
@@ -21,23 +22,24 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* <main className="container mx-auto flex flex-col items-center justify-center min-h-screen p-4"> */}
-      <main className="bg-bac container mx-auto flex flex-col items-center justify-flex-start min-h-screen">
+      <main className="bac-color container mx-auto flex flex-col items-center justify-flex-start min-h-screen">
         <div
           id="top"
           className="pt-3 grow-0 grid gap-3 mt-pt-3 3 text-center md:grid-cols-3 lg:w-2/3"
         >
-          <h1 className="text-5xl text-white md:text-[3rem] leading-normal font-bold ">
-            Learn <span className="text-main text-6xl">π</span>
+          <h1 className="text-5xl title-color md:text-[3rem] leading-normal font-bold ">
+            Learn <span className="main-color text-6xl">π</span>
           </h1>
           <div
             id="menu"
-            className="pt-3 grid gap-3 mt-pt-3 3 items-center grid-cols-4"
+            className="pt-3 grid gap-3 mt-pt-3 3 items-center grid-cols-5"
           >
             <IconContext.Provider value={{ size: "30" }}>
               <FiAward className="sub-color"/>
               <FiSliders className="sub-color"/>
               <FiInfo className="sub-color"/>
               <FiUser className="sub-color"/>
+              <ThemeIcon/>
             </IconContext.Provider>
           </div>
           <div
