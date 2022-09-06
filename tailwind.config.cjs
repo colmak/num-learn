@@ -4,6 +4,7 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class", // or 'media' or 'class'
   theme: {
     colors: {
       'bac': '#242933',

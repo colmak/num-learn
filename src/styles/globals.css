@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .sub-color {
+        @apply text-sub hover:text-white transition-colors duration-300;
+    }
+}

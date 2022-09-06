@@ -33,21 +33,21 @@ const Home: NextPage = () => {
             id="menu"
             className="pt-3 grid gap-3 mt-pt-3 3 items-center grid-cols-4"
           >
-            <IconContext.Provider value={{ color: "#596172", size: "30" }}>
-              <FiAward />
-              <FiSliders />
-              <FiInfo />
-              <FiUser />
+            <IconContext.Provider value={{ size: "30" }}>
+              <FiAward className="sub-color"/>
+              <FiSliders className="sub-color"/>
+              <FiInfo className="sub-color"/>
+              <FiUser className="sub-color"/>
             </IconContext.Provider>
           </div>
           <div
             id="quick-config"
             className="pr-10 grid text-center items-center justify-end"
           >
-            <h1 className="text-1xl text-sub md:text-[1rem] leading-normal font-bold ">
+            <h1 className="text-1xl sub-color md:text-[1rem] leading-normal font-bold ">
               Learn
             </h1>
-            <h1 className="text-1xl text-sub md:text-[1rem] leading-normal font-bold ">
+            <h1 className="text-1xl sub-color md:text-[1rem] leading-normal font-bold ">
               Test
             </h1>
           </div>
