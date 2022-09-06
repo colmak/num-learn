@@ -4,13 +4,13 @@
 
 @layer components {
     .sub-color {
-        @apply dark:text-sub dark:hover:text-white text-sub2 hover:text-black transition-colors duration-100;
+        @apply dark:text-sub dark:hover:text-white text-sub2 hover:text-black transition-colors duration-100 cursor-pointer;
     }
     .main-color {
-        @apply dark:text-main text-main2;
+        @apply dark:text-main text-main2 cursor-pointer;
     }
     .title-color {
-        @apply dark:text-white text-black;
+        @apply dark:text-white text-black cursor-pointer;
     }
     .bac-color {
         @apply dark:bg-bg bg-bg2;
