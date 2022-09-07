@@ -8,7 +8,7 @@ import { useEffect } from "react";
 const MyApp: AppType = ({ Component, pageProps }) => {
     useEffect(() => {
       const root: any = document.getElementById("__next")
-      root.className = "bg-bac";
+      root.className = "bac-color";
     }, []);
   return <Component {...pageProps} />;
 };
