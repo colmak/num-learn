@@ -6,12 +6,6 @@ import { IconContext } from "react-icons";
 import ThemeIcon from './components/ThemeIcon'
 import FooterMenu from './components/FooterMenu'
 
-type TechnologyCardProps = {
-  name: string;
-  description: string;
-  documentation: string;
-};
-
 const Home: NextPage = () => {
   const { data, isLoading } = trpc.useQuery(["hello", { text: "Ron" }]);
   return (
