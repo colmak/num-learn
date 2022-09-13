@@ -1,10 +1,8 @@
 import type { NextPage } from "next";
 import { trpc } from "./utils/trpc";
 import Head from "next/head";
-import { FiUser, FiSliders, FiAward, FiInfo } from "react-icons/fi";
-import { IconContext } from "react-icons";
-import ThemeIcon from './components/ThemeIcon'
 import FooterMenu from './components/FooterMenu'
+import IconMenu from "./components/IconMenu";
 
 const Home: NextPage = () => {
   const { data, isLoading } = trpc.useQuery(["hello", { text: "Ron" }]);
@@ -16,7 +14,6 @@ const Home: NextPage = () => {
         <meta name="description" content="Learn the digits of Pi" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <main className="container mx-auto flex flex-col items-center justify-center min-h-screen p-4"> */}
       <main className="bac-color container mx-auto flex flex-col items-center justify-flex-start min-h-screen">
         <div
           id="top"
@@ -29,13 +26,7 @@ const Home: NextPage = () => {
             id="menu"
             className="pt-3 grid gap-3 mt-pt-3 3 items-center grid-cols-5"
           >
-            <IconContext.Provider value={{ size: "30" }}>
-              <FiAward className="sub-color"/>
-              <FiSliders className="sub-color"/>
-              <FiInfo className="sub-color"/>
-              <FiUser className="sub-color"/>
-              <ThemeIcon/>
-            </IconContext.Provider>
+            <IconMenu></IconMenu>
           </div>
           <div
             id="quick-config"
