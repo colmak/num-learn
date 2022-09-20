@@ -3,6 +3,7 @@ import { trpc } from "./utils/trpc";
 import Head from "next/head";
 import FooterMenu from './components/FooterMenu'
 import IconMenu from "./components/IconMenu";
+import PITyper from "./components/PITyper";
 
 const Home: NextPage = () => {
   const { data, isLoading } = trpc.useQuery(["hello", { text: "Ron" }]);
@@ -45,7 +46,7 @@ const Home: NextPage = () => {
           className="pt-3 grow grid gap-3 mt-pt-3 3 items-center justify-center md:grid-rows-3"
         >
           <div>temp</div>
-          <div>temp</div>
+          <PITyper></PITyper>
           <div>temp</div>
         </div>
         <div id="footer" className="grow-0 grid bottom-0 p-8">
